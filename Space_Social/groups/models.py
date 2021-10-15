@@ -5,7 +5,7 @@ from django.urls import reverse
 
 import misaka 
 
-from django.contrib.auth.models import get_user_model
+from django.contrib.auth import get_user_model
 User = get_user_model()
 
 from django import template
@@ -34,8 +34,8 @@ class Group(models.Model):
 
 
 class GroupMember(models.Model):
-   group = models.ForeignKey(Group,related_name='memberships')
-   user = models.ForeignKey(User,related_name='user_groups')
+   group = models.ForeignKey(Group,related_name='memberships',on_delete=models.CASCADE)
+   user = models.ForeignKey(User,related_name='user_groups',on_delete=models.CASCADE)
    
    def __str__(self):
        return self.user.username
