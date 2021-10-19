@@ -2,6 +2,7 @@
 
 {% block pregroup %}
 <div class="container">
+	
   <h1>{{group.name}}</h1>
   <h2> Member Count: {{group.members.count}}</h2>
 	<p>{{group.description|safe}}</p>
@@ -11,23 +12,27 @@
   	{% else %}
   		<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-lg btn-warning"><span class="fa fa-check-circle-o"></span> Join</a>
   	{% endif %}
-
   </div>
 </div>
 {% endblock %}
 
 {% block group_content %}
 
-<div class="col-md-8">
+<div class="col-md-8 pt-3">
 	{% if group.posts.count == 0 %}
 	<h2>No posts in this group yet!</h2>
-
 	{% else %}
-
+		
 		{% for post in group.posts.all %}
+		<div class="bg-dark text-light p-3"style="border-radius: 10px;">
 			{% include "posts/_post.html" %}
+		</div>
+			<br>
 		{% endfor %}
-
+		
+		
+		
 	{% endif %}
 </div>
 {% endblock %}
+
