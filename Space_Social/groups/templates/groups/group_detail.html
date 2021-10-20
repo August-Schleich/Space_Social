@@ -22,8 +22,9 @@
 	{% if group.posts.count == 0 %}
 	<h2>No posts in this group yet!</h2>
 	{% else %}
-		
+	
 		{% for post in group.posts.all %}
+		
 		<div class="bg-dark text-light p-3"style="border-radius: 10px;">
 			{% include "posts/_post.html" %}
 		</div>

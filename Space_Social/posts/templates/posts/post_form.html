@@ -7,8 +7,7 @@
 <form class="form-control" method="POST" action="{% url 'posts:create' %}" id="postForm" style="border:none;" >
 	{% csrf_token %}
 	{% bootstrap_form form %}
-	{% buttons %}
-		<button type="submit" class="btn btn-primary btn-large">Post</button>
-	{% endbuttons %}
+	<input type="submit" Value="POST" class="btn btn-primary btn-large">
+	
 </form>
 {% endblock %}

@@ -1,12 +1,13 @@
-<div class="media">
 
-	<div class="media-body">
+<div class="media">
+	
+	<div class="media-body bg-dark p-2 text-light rounded">
 		<a href="{% url 'posts:for_user' username=post.user.username %}"><strong >@{{ post.user.username }}</strong></a>
-		<h5 class="media-heading pt-2">{{ post.message_html|safe }}</h5>
+		<h5 class="media-heading p-2">{{ post.message_html|safe }}</h5>
 		
-			<time class="time"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at }}</a></time>
+			<time class="time"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at}}</a></time>
 			{% if post.group %}
-			<span class="group-name">in<a href="#">{{ post.group.name }}</a></span>
+			<span class="group-name">in <a href="#">{{ post.group.name }}</a></span>
 			{% endif %}
 		</h5>
 
@@ -20,3 +21,4 @@
 		</div>
 	</div>
 </div>
+<br>
