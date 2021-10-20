@@ -47,7 +47,7 @@ class PostDetail(SelectRelatedMixin,generic.DeleteView):
         return queryset.filter(user__username__iexact=self.kwargs.get('username'))
     
 class CreatePost(LoginRequiredMixin,SelectRelatedMixin,generic.CreateView):
-    success_url = reverse_lazy('posts:all')
+    success_url = reverse_lazy('posts:for_user')
     fields = ('message','group')
     model = models.Post 
     
@@ -60,7 +60,8 @@ class CreatePost(LoginRequiredMixin,SelectRelatedMixin,generic.CreateView):
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
     model = models.Post
     select_related = ('user', 'group')
-    success_url = reverse_lazy('posts:all')
+    success_url = reverse_lazy('posts:for_user')
+    
 
     def get_queryset(self):
         queryset = super().get_queryset()

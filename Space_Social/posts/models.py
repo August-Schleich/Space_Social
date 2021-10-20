@@ -1,6 +1,5 @@
 # POSTS MODELS.PY
 from django.db import models
-from django.db.models.expressions import F
 from django.urls import reverse
 from django.conf import settings
 
