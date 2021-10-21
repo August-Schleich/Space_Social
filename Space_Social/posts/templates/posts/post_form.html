@@ -5,13 +5,11 @@
 {% block post_content %}
 <h4>Create New Post</h4>
 
-<form class="form-control" method="POST" action="{% url 'posts:create' %}"  
-href="{%url 'posts:for_user' username=user.username %}" id="postForm" style="border:none;" >
-
+<form class="form-control" method="POST" action="{% url 'posts:create' %}" id="postForm" style="border:none;" >
 	{% csrf_token %}
 	{% bootstrap_form form %}
 
-	 <input type="submit" Value="POST" class="btn btn-primary btn-large">
+	 <input type="submit" Value="POST" class="btn btn-primary btn-large"></a>
 	
 </form>
 {% endblock %}

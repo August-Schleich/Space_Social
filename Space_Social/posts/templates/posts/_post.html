@@ -1,5 +1,5 @@
 
-<div class="media">
+<div class="post media">
 	<div class="media-body bg-dark p-2 text-light rounded">
 		<a href="{% url 'posts:for_user' username=post.user.username %}"><strong >@{{ post.user.username }}</strong></a>
 		<h5 class="media-heading p-2">{{ post.message_html|safe }}</h5>
@@ -20,4 +20,4 @@
 		</div>
 	</div>
 </div>
-<br>
+<br> 

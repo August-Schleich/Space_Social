@@ -14,6 +14,7 @@
 					<a href="{% url 'groups:single' slug=member_group.group.slug %}">{{ member_group.group.name }}</a>
 				</li>
 				{% endfor %}
+
 			</ul>
 		</div>
 	</div>
@@ -27,6 +28,10 @@
 					<li class="group li-with-bullet"><a href="{% url 'groups:single' slug=other_group.slug %}">{{ other_group.name }}</a></li>
 				{% endfor %}
 			</ul>
+			
+
+
+
 		</div>
 	</div>
 </div>
