@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.http import Http404
 from django.views import generic
 
-
+from django.urls import reverse
 from braces.views import SelectRelatedMixin
 
 from . import forms
@@ -54,8 +54,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     # form_class = forms.PostForm
     fields = ('message','group')
     model = models.Post
-  
-    # def get_form_kwargs(self):
+   
     #     kwargs = super().get_form_kwargs()
     #     kwargs.update({"user": self.request.user})
     #     return kwargs
@@ -65,12 +64,15 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
         self.object.user = self.request.user
         self.object.save()
         return super().form_valid(form)
+    
 
+  
+        
 
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
     model = models.Post
     select_related = ("user", "group")
-    success_url = reverse_lazy("posts:all")
+    success_url = reverse_lazy("posts:for_user")
 
     def get_queryset(self):
         queryset = super().get_queryset()
