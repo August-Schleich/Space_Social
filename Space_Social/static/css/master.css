@@ -14,6 +14,14 @@ body {
   margin: 0;
 }
 
+
+#intro {
+    position: absolute;
+    color: rgba(249,241,204,1);
+  
+  }
+
+
 #note {
   position: absolute;
   color: rgba(249,241,204,1);
@@ -24,4 +32,12 @@ body {
   text-align: center;
   user-select: none;
   font-family: Arial;
+}
+
+.nav-item hover{
+    color: white;
+}
+
+#postForm{
+    z-index: 1000;
 }

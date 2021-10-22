@@ -5,7 +5,7 @@
 {% block post_content %}
 <h4>Create New Post</h4>
 
-<form class="form-control" method="POST" action="{% url 'posts:create' %}" id="postForm" style="border:none;" >
+<form class="container" method="POST" action="{% url 'posts:create' %}" id="postForm" style="border:none;" >
 	{% csrf_token %}
 	{% bootstrap_form form %}
 
