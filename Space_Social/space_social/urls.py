@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.conf import settings
 
 urlpatterns = [
     path('', views.HomePage.as_view(), name="home"),
@@ -28,3 +29,8 @@ urlpatterns = [
     path('groups/',include("groups.urls", namespace="groups")),
 ]
 
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls))
+    ] + urlpatterns

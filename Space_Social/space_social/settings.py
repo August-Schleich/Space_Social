@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'groups',
     'posts',
     'django.contrib.humanize',
+    'debug_toolbar',
     
 ]
 
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'space_social.urls'
@@ -143,3 +145,4 @@ LOGOUT_REDIRECT_URL = 'thanks'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
+INTERNAL_IPS = ['127.0.0.1']
