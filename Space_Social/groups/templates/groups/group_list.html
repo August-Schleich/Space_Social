@@ -23,12 +23,12 @@
 
 {% block group_content %}
 
-<div class= "col-md-8 p-5">
+<div class= "col-md-8 p-5 ">
     <div class ="list-group">
       {% for group in object_list %}
-      <a class ="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
+      <a class ="list-group-item bg-dark rounded" href="{% url 'groups:single' slug=group.slug %}">
           <h3 class="title list-group-item-heading">{{group.name}}</h3>
-          <div class="list-group-item-text container-fluid">
+          <div class="list-group-item-text container-fluid ">
             {{group.description_html|safe}}
           </div>
           <div class="row">
@@ -44,6 +44,7 @@
               </div>
           </div>
       </a>
+      <br>
      {% endfor %}
     </div>
 </div>

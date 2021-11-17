@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow: hidden;
+   
     background-color: black;
     color:white;
   }
@@ -9,7 +9,7 @@ body {
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  
   background: #2f294f;
   margin: 0;
 }
@@ -40,4 +40,14 @@ body {
 
 #postForm{
     z-index: 1000;
+}
+
+.rounded{
+  border-radius: 10px;
+}
+
+#detailcoms{
+  margin:auto;
+  /* border: solid 10px red; */
+  
 }
