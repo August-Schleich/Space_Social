@@ -3,13 +3,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.http import Http404
 from django.views import generic
-
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from braces.views import SelectRelatedMixin
-
+from .forms import PostForm
 from . import forms
 from . import models
-
+ 
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
@@ -51,21 +51,23 @@ class PostDetail(SelectRelatedMixin, generic.DetailView):
 
 
 class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
-    # form_class = forms.PostForm
-    fields = ('message','group')
     model = models.Post
-   
+    form_class= forms.PostForm
+    select_related = ("user", "group")
+    success_url = reverse_lazy("groups:all")
+    
     #     kwargs = super().get_form_kwargs()
     #     kwargs.update({"user": self.request.user})
     #     return kwargs
 
     def form_valid(self, form):
+        
         self.object = form.save(commit=False)
         self.object.user = self.request.user
         self.object.save()
         return super().form_valid(form)
     
-
+  
   
         
 
