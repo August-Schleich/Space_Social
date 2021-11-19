@@ -9,7 +9,7 @@ body {
 body {
   height: 100%;
   width: 100%;
-  
+ 
   background: #2f294f;
   margin: 0;
 }
@@ -50,4 +50,12 @@ body {
   margin:auto;
   /* border: solid 10px red; */
   
+}
+
+.badge{
+  color: white;
+}
+
+.groupscript{ 
+  color:white;
 }

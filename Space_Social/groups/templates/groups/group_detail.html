@@ -4,14 +4,15 @@
 
 <div class="content pt-5">
 	
-  <h1>{{group.name}}</h1>
-  <h2> Member Count: {{group.members.count}}</h2>
+  <h1 class="text-info">{{group.name}}</h1>
+  <h3 >Group Members: {{group.members.count}}</h3>
 	<p>{{group.description|safe}}</p>
   <div class="content">
   	{% if user in group.members.all %}
-  		<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-lg btn-warning"><span class="fa fa-times-circle-o"></span> Leave</a>
+  		<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-warning"><span class=></span> Leave Group</a>
+		<a href="{% url 'posts:create' %}" class="btn btn-warning">Create Post</a>
   	{% else %}
-  		<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-lg btn-warning"><span class="fa fa-check-circle-o"></span> Join</a>
+  		<a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-warning"><span class="fa fa-check-circle-o"></span> Join</a>
   	{% endif %}
   </div>
 </div>
