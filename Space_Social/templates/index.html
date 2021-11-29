@@ -2,15 +2,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <div class="index-intro">
 <h1 id="intro"> Welcome to Star Social Network! </h1>
-<p> See whats latest with Nasa by watching some live streams, keep up with curiosity rover or hubble telescope</p>
+<p> See whats latest with Nasa by watching NASA LIVE, see the latest with the Curiosity rover and Hubble telescope!</p>
 </div>
 <br>
 <br>
 
- <div class="row">
-  <div class="col-md-4">
+ <div class="row ">
+  <div class="col-md-8">
     <div class="thumbnail">
       <a href="https://youtu.be/21X5lGlDOfg">
         <img src="https://i.ytimg.com/vi/69-kc-azAY4/maxresdefault.jpg" alt="Lights" style="width:100%">
@@ -21,7 +22,7 @@
     </div>
   </div>
   
-  <div class="col-md-4">
+  <div class=" col-md-4 ">
     <div class="thumbnail">
       <a href="https://mars.nasa.gov/msl/home/">
         <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23378-16.jpg" alt="Nature" style="width:100%">
@@ -30,8 +31,27 @@
         </div>
       </a>
     </div>
+    <div class="thumbnail">
+      <a href="/w3images/fjords.jpg">
+        <img src="https://i.insider.com/60d3a5f05f52060018bbebe8?width=1200&format=jpeg" alt="Fjords" style="width:100%">
+        <div class="caption">
+          <p>Hubble Telescope Latest!</p>
+        </div>
+      </a>
+    </div>
   </div>
-  <div class="col-md-4">
+  <div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="/w3images/fjords.jpg">
+        <img src="https://i.insider.com/60d3a5f05f52060018bbebe8?width=1200&format=jpeg" alt="Fjords" style="width:100%">
+        <div class="caption">
+          <p>Hubble Telescope Latest!</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6">
     <div class="thumbnail">
       <a href="/w3images/fjords.jpg">
         <img src="https://i.insider.com/60d3a5f05f52060018bbebe8?width=1200&format=jpeg" alt="Fjords" style="width:100%">
@@ -42,8 +62,11 @@
     </div>
   </div>
 </div>
+</div>
+
+
 <div class ="container" >
-<a class="twitter-timeline" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASAHubble</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 {% endblock %}
