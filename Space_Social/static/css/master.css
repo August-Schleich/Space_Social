@@ -15,8 +15,18 @@ body {
 }
 
 
+.index-img{
+  max-width: 100%;
+ 
+}
+.index-intro{
+  position: relative;
+}
+.thumbnail{ 
+  position: absolute;
+}
 #intro {
-    position: absolute;
+ 
     color: rgba(249,241,204,1);
   
   }
@@ -58,4 +68,13 @@ body {
 
 .groupscript{ 
   color:white;
+}
+
+.responsive{
+  width: 100%;
+  height: auto;
+  border: solid 10px red;
+  max-height: 450px;
+  max-width: 450px;
+
 }
