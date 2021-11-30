@@ -10,7 +10,7 @@ body {
   height: 100%;
   width: 100%;
  
-  background: #2f294f;
+  background: black;
   margin: 0;
 }
 
@@ -26,7 +26,7 @@ body {
   position: absolute;
 }
 #intro {
- 
+ margin:auto;
     color: rgba(249,241,204,1);
   
   }
@@ -79,3 +79,26 @@ body {
 
 }
 
+.caption{
+background-color: rgba(255, 255, 255, 0.836);
+position: relative;
+
+padding-left: 2px;
+color: black;
+}
+.title{ 
+  background-color:#5d7fb9;
+  position:absolute;
+  bottom:10%;
+}
+
+.marsrover{
+  position:relative;
+}
+.row{
+  margin:auto;
+}
+
+.nasatext{
+  font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
