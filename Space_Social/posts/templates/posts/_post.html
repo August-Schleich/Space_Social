@@ -1,6 +1,6 @@
 
 <div class="post media">
-	<div class="media-body text-dark pt-2">
+	<div class="media-body bg-light text-dark p-3">
 		<a href="{% url 'posts:for_user' username=post.user.username %}"><strong >@{{ post.user.username }}</strong></a>
 		<p class="media-heading nasatext ">{{ post.message_html|safe }}</p>
 		
@@ -19,5 +19,4 @@
 			<hr>
 		</div>
 	</div>
-	
 </div>
