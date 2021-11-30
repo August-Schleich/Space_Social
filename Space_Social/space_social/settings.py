@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
  
 #  ADD A NOTE ANYWHERE
 
-LOGIN_REDIRECT_URL = 'test'
+LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'thanks'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'

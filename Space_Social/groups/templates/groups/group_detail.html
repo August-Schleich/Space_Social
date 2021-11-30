@@ -6,7 +6,9 @@
 	
   <h1 class="text-info">{{group.name}}</h1>
   <h3 >Group Members: {{group.members.count}}</h3>
+  <div class='container'>
 	<p>{{group.description|safe}}</p>
+  </div>
   <div class="content">
   	{% if user in group.members.all %}
   		<a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-warning"><span class=></span> Leave Group</a>
@@ -25,10 +27,11 @@
 	<h2>No posts in this group yet!</h2>
 	{% else %}
 		{% for post in group.posts.all %}
-		<div class="bg-dark text-light rounded">
+		
+		<div class="bg-light pl-2 text-dark">
 			{% include "posts/_post.html" %}
 		</div>
-		<br>
+		
 		{% endfor %}
 	{% endif %}
 </div>

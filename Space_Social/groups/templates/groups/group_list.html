@@ -12,7 +12,7 @@
          {% endif %}
          <h2>Groups</h2>
          <h4>Welcome to the groups page!</h4>
-         <p>if you woould like to create a group or post to existing group please Login or Signup!
+         <p>if you would like to create a group or post to existing group please Login or Signup!
          <br>
          <div>
         
@@ -34,18 +34,18 @@
 <div class= "col-md-8 p-5 ">
     <div class ="list-group">
       {% for group in object_list %}
-      <a class ="list-group-item bg-dark rounded" href="{% url 'groups:single' slug=group.slug %}">
+      <a class ="list-group-item bg-light rounded" href="{% url 'groups:single' slug=group.slug %}">
           <h3 class="title list-group-item-heading text-info">{{group.name}}</h3>
-          <div class="list-group-item-text container-fluid groupscript ">
+          <div class=" text-dark list-group-item-text container-fluid groupscript ">
             <p class="groupscript">{{group.description_html|safe}}</p>
           </div>
           <div class="row">
-              <div class="col-md-4">
-                <span class ="badge">{{group.members.count}}</span>
+              <div class="col-md-4 ">
+                <span class =" text-dark badge">{{group.members.count}}</span>
                 member{{group.members.count|pluralize}}
               </div>
               <div class="col-md-4">
-                <span class ="badge">{{group.members.count}}</span>
+                <span class ="badge text-dark">{{group.members.count}}</span>
                 post{{group.posts.count|pluralize}}
                 </span>
 

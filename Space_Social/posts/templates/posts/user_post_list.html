@@ -11,10 +11,9 @@
 {% block post_content %}
 <div class="col-md-8 pt-5 ">
 	{% for post in post_list %}
-	<div class="bg-dark text-light p-2" style="border-radius: 10px;">
+	<div class="bg-light text-dark p-2" >
 		{% include "posts/_post.html" %}
 	</div>
-	<br>
 	{% endfor %}
 </div>
 {% endblock %}

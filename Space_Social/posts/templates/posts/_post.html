@@ -1,8 +1,8 @@
 
 <div class="post media">
-	<div class="media-body bg-dark p-2 text-light rounded">
+	<div class="media-body text-dark pt-2">
 		<a href="{% url 'posts:for_user' username=post.user.username %}"><strong >@{{ post.user.username }}</strong></a>
-		<h5 class="media-heading p-2">{{ post.message_html|safe }}</h5>
+		<p class="media-heading nasatext ">{{ post.message_html|safe }}</p>
 		
 			<time class="time"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at}}</a></time>
 			{% if post.group %}
@@ -16,7 +16,8 @@
 					<span class="text-danger icon-label">Delete</span>
 				</a>
 			{% endif %}
+			<hr>
 		</div>
 	</div>
+	
 </div>
-<br> 
