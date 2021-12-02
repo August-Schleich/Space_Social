@@ -22,12 +22,11 @@
 
 {% block group_content %}
 
-<div id = 'detailcoms'class="col-md-8  pt-5" >
+<div id = 'detailcoms'class="col-md-8  " >
 	{% if group.posts.count == 0 %}
 	<h2>No posts in this group yet!</h2>
 	{% else %}
 		{% for post in group.posts.all %}
-		
 		<div class="bg-light pl-2 text-dark">
 			{% include "posts/_post.html" %}
 		</div>

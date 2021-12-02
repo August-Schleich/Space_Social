@@ -57,7 +57,8 @@ body {
 }
 
 #detailcoms{
-  margin:auto;
+  /* margin:auto; */
+  padding:10px;
   /* border: solid 10px red; */
   
 }
@@ -102,3 +103,10 @@ color: black;
 .nasatext{
   font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
+
+.showme{
+  border: solid 10px red;
+ 
+ 
+}
+

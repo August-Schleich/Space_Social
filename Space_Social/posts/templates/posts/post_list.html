@@ -2,7 +2,7 @@
 {% load humanize %}
 
 {% block pre_post_content %}
-<div class="col-md-4">
+<div class="col-md-4 ">
 	{% if request.user.is_authenticated %}
 	<div class="card card-with-shadow">
 		<div class="content">
@@ -29,13 +29,11 @@
 				{% endfor %}
 			</ul>
 			
-
-
-
 		</div>
 	</div>
 </div>
 {% endblock %}
+
 {% block post_content %}
 <div class="col-md-8">
 	{% for post in post_list %}
