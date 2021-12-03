@@ -1,7 +1,7 @@
 {% extends "groups/group_base.html" %}
 
 {% block pregroup %}
-<div class ="col-md-4 p-5 ">
+<div class ="col-md-4 p-5  rounded ">
     <div class ="content">
         {% if user.is_authenticated %}
         <h2>Welcome
@@ -31,21 +31,21 @@
 
 {% block group_content %}
 
-<div class= "col-md-8 p-5 ">
+<div class= "col-md-8 p-5 rounded ">
     <div class ="list-group">
       {% for group in object_list %}
-      <a class ="list-group-item bg-light rounded" href="{% url 'groups:single' slug=group.slug %}">
+      <a class ="list-group-item bg-dark rounded text-light" href="{% url 'groups:single' slug=group.slug %}">
           <h3 class="title list-group-item-heading text-info">{{group.name}}</h3>
-          <div class=" text-dark list-group-item-text container-fluid groupscript ">
+          <div class=" text-light list-group-item-text container-fluid groupscript ">
             <p class="groupscript">{{group.description_html|safe}}</p>
           </div>
           <div class="row">
               <div class="col-md-4 ">
-                <span class =" text-dark badge">{{group.members.count}}</span>
+                <span class =" text-primary badge">{{group.members.count}}</span>
                 member{{group.members.count|pluralize}}
               </div>
               <div class="col-md-4">
-                <span class ="badge text-dark">{{group.members.count}}</span>
+                <span class ="badge text-primary">{{group.members.count}}</span>
                 post{{group.posts.count|pluralize}}
                 </span>
 
