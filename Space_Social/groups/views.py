@@ -20,12 +20,21 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
 
 class SingleGroup(generic.DetailView):
     model = Group
-   
+    select_related = ("user", "group")
+    ordering = ['-created_at']
+    
+ 
+    
+    
+    
+    
        
 class ListGroups(generic.ListView):
     model = Group
-   
     
+   
+ 
+       
 class JoinGroup(LoginRequiredMixin, generic.RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):

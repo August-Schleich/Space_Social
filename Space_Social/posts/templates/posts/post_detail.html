@@ -1,6 +1,6 @@
 {% extends "posts/post_base.html" %}
-{% block prepost %}
-<div class="container p-3 col-md-4 ">
+{% block pre_post_content %}
+<div class="container p-3 col-md-4  ">
 	
 	<h1><a href="{% url 'posts:for_user' username=post.user.username %}"><strong >@{{ post.user.username }}</strong></a><h1>
 	
@@ -12,4 +12,5 @@
 </div>
 
 {% endblock %}
+
 

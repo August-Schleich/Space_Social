@@ -17,14 +17,17 @@ User = get_user_model()
 class PostList(SelectRelatedMixin, generic.ListView):
     model = models.Post
     select_related = ("user", "group")
-    
+    ordering = ['-created_at']
 
 
 class UserPosts(generic.ListView):
     model = models.Post
+    select_related = ("user", "group")
     template_name = "posts/user_post_list.html"
-
+    ordering = ['-created_at']
+    
     def get_queryset(self):
+       
         try:
             self.post_user = User.objects.prefetch_related("posts").get(
                 username__iexact=self.kwargs.get("username")
@@ -32,7 +35,8 @@ class UserPosts(generic.ListView):
         except User.DoesNotExist:
             raise Http404
         else:
-            return self.post_user.posts.all()
+            qr =  self.post_user.posts.order_by('-created_at')
+            return qr.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -43,7 +47,7 @@ class UserPosts(generic.ListView):
 class PostDetail(SelectRelatedMixin, generic.DetailView):
     model = models.Post
     select_related = ("user", "group")
-
+    ordering = ['-created_at']
     def get_queryset(self):
         queryset = super().get_queryset()
         return queryset.filter(

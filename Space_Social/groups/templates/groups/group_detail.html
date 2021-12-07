@@ -25,19 +25,16 @@
 {% endblock %}
 
 
-{% block group_content %}
 
+{% block group_content %}
 <div id='' class=" pt-5 rounded col-md-6 " >
 
 	{% if group.posts.count == 0 %}
 	<h2>No posts in this group yet!</h2>
 	{% else %}
-	
 		{% for post in group.posts.all %}
 		
 			{% include "posts/_post.html" %}
-		
-		
 		{% endfor %}
 	{% endif %}
 </div>

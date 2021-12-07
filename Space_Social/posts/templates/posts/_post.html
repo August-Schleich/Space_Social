@@ -1,10 +1,12 @@
 
 <div class="post media ">
 	<div class="media-body text-light p-1 col-md-12 "> 
+		
 		<a href="{% url 'posts:for_user' username=post.user.username %}"><strong >@{{ post.user.username }}</strong></a>
 		<p class="media-heading nasatext">{{ post.message_html|safe }}</p>
 		
-			<time class="time"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at}}</a></time>
+			{% comment %} <time class="time"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at | timesince}} ago</a></time> {% endcomment %}
+			<time class="time text-primary">{{ post.created_at | timesince}} ago</time>
 			{% if post.group %}
 			<span class="group-name">in <a href="{% url 'groups:all' %}">{{ post.group.name }}</a></span>
 			{% endif %}
