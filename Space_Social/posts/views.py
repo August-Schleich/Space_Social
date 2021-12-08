@@ -59,7 +59,8 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     model = models.Post
     form_class= forms.PostForm
     select_related = ("user", "group")
-    success_url = reverse_lazy("posts:all")
+    username = 'username'
+    success_url = reverse_lazy("posts:all" )
     
     #     kwargs = super().get_form_kwargs()
     #     kwargs.update({"user": self.request.user})
@@ -79,7 +80,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
     model = models.Post
     select_related = ("user", "group")
-    success_url = reverse_lazy("posts:all")
+    success_url = reverse_lazy("posts:all" )
     
 
     def get_queryset(self):
@@ -89,5 +90,6 @@ class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
     def delete(self, *args, **kwargs):
         messages.success(self.request, "Post Deleted")
         return super().delete(*args, **kwargs)
-
+     
+    
  

@@ -113,3 +113,14 @@ color: black;
 
 
 
+
+.xbtn {
+  
+  width: 75px;
+  font-size: 10pt;
+ 
+  margin-right: 2px;
+  position:absolute;
+  top:0;
+  right:0;
+}

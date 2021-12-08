@@ -4,15 +4,11 @@
 {% block pre_post_content %}
 <div class="col-md-4">
 	{% if request.user.is_authenticated %}
-	<div class="card card-with-shadow">
-		<div class="content container">
-			<h5 class="title text-dark">Your Groups</h5>
+	<div class="card card-with-shadow text-light bg-dark">
+		<div class="content container ">
+			<h5 class="title p-1 ">Your Groups</h5>
 			<ul class="list-unstyled">
-				{% for post in post_list %}
-				
-	
-				{% endfor %}
-				{% for member_group in get_user_groups %}
+				{% for member_group in user.user_groups.all %}
 				<li class="group li-with-bullet">
 					<a href="{% url 'groups:single' slug=member_group.group.slug %}">{{ member_group.group.name }}</a>
 				</li>
@@ -21,8 +17,8 @@
 		</div>
 	</div>
 	{% endif %}
-	<div class="card card-with-shadow">
-		<div class="content container">
+	{% comment %} <div class="card card-with-shadow">
+		<div class="content container ">
 			<h5 class="title text-dark">All groups</h5>
 			<ul class="list-unstyled">
 				{# {% get_other_groups as other_groups %}#}
@@ -32,14 +28,16 @@
 			</ul>
 			
 		</div>
-	</div>
+	</div> {% endcomment %}
 </div>
 {% endblock %}
 
 {% block post_content %}
 <div class="col-md-8">
+	
 	{% for post in post_list %}
   {% include "posts/_post.html" %}
 	{% endfor %}
+
 </div>
 {% endblock %}
