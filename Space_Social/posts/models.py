@@ -28,9 +28,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('posts:for_user', kwargs={'username':self.user.username})
         
-class Meta:
-    ordering = ['-created_at']
-    unique_together = ['user','message']
+    class Meta:
+        ordering = ['-created_at']
+        unique_together = ['user','message']
     
     
 

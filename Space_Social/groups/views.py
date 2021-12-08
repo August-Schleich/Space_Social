@@ -14,6 +14,11 @@ from groups.models import Group,GroupMember
 from . import models
 
 
+from django.template import Library
+register = Library()
+
+
+
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
     model = Group
@@ -21,10 +26,11 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
 class SingleGroup(generic.DetailView):
     model = Group
     select_related = ("user", "group")
-    ordering = ['-created_at']
+   
     
- 
-    
+    class Meta:
+        ordering = ['-created_at']
+
     
     
     
