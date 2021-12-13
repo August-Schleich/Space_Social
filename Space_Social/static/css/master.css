@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: auto;
    
     background-color: black;
     color:white;
@@ -11,7 +11,7 @@ body {
   width: 100%;
  
   background: rgb(39, 38, 38);
-  margin: 0;
+  margin: auto;
 }
 
 
@@ -82,9 +82,16 @@ body {
 }
 
 .caption{
-background-color: rgba(255, 255, 255, 0.836);
+background-color: rgb(255, 255, 255 ,.555);
 position: relative;
-
+bottom:0;
+padding-left: 2px;
+color: black;
+}
+.caption6{
+  background-color: rgb(255, 255, 255 ,.555);
+position: relative;
+bottom:10;
 padding-left: 2px;
 color: black;
 }
@@ -107,7 +114,7 @@ color: black;
 
 .showme{
   border: solid 10px red;
- 
+  
  
 }
 
@@ -123,4 +130,21 @@ color: black;
   position:absolute;
   top:0;
   right:0;
+}
+.panel{
+  height:auto;
+}
+
+.index-page{
+  width:100%;
+}
+.nasa-app{
+  height:90%;
+}
+.youtube{
+ height:100%;
+ width:100%;
+ min-height:250px;
+ margin-bottom: 10px;
+ padding-bottom: 15px;
 }
