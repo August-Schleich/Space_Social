@@ -2,7 +2,7 @@
 
 {% block pregroup %}
 
-<div class="pt-5  col-md-6 ">
+<div class="pt-5  col-md-4 ">
 	
   <h1 class="text-info">{{group.name}}</h1>
   <h3 >Group Members: {{group.members.count}}</h3>
@@ -27,7 +27,7 @@
 
 
 {% block group_content %}
-<div id='' class=" pt-5 rounded col-md-6 " >
+<div id='' class=" pt-5 rounded col-md-8 " >
 
 	{% if group.posts.count == 0 %}
 	<h2>No posts in this group yet!</h2>

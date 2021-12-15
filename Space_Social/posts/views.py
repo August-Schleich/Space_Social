@@ -18,6 +18,8 @@ class PostList(SelectRelatedMixin, generic.ListView):
     model = models.Post
     select_related = ("user", "group")
     ordering = ['-created_at']
+    
+    
 
 
 class UserPosts(generic.ListView):

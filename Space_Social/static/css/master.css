@@ -1,6 +1,6 @@
 body {
     margin: auto;
-   
+     
     background-color: black;
     color:white;
   }
@@ -9,8 +9,8 @@ body {
 body {
   height: 100%;
   width: 100%;
- 
-  background: rgb(39, 38, 38);
+  
+  background: rgb(0, 0, 0);
   margin: auto;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 .index-intro{
   position: relative;
-
+  background-color:rgb(93, 127, 185,.500);
 }
 .abso{ 
   position: absolute;
@@ -82,21 +82,21 @@ body {
 }
 
 .caption{
-background-color: rgb(255, 255, 255 ,.555);
+background-color: rgb(255, 255, 255 ,.500);
 position: relative;
 bottom:0;
 padding-left: 2px;
 color: black;
 }
 .caption6{
-  background-color: rgb(255, 255, 255 ,.555);
+  background-color: rgb(255, 255, 255 ,.500);
 position: relative;
 bottom:10;
 padding-left: 2px;
 color: black;
 }
 .image-title{ 
-  background-color:#5d7fb9;
+  background-color:rgb(93, 127, 185,.500);
   position:absolute;
   bottom:10%;
 }
@@ -148,3 +148,9 @@ color: black;
  margin-bottom: 10px;
  padding-bottom: 15px;
 }
+
+.twitter-feed{
+  max-width: 400px;
+ 
+}
+
