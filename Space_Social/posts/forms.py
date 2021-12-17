@@ -6,9 +6,8 @@ from django.contrib.auth.models import User, Group
 
 class PostForm(forms.ModelForm):
     message = forms.Textarea()
-    # group = forms.Select()
-    group = forms.ModelChoiceField(queryset=Group.objects.all(),
-                                   required=True)
+    group = forms.Select()
+
     
     
     class Meta: 
