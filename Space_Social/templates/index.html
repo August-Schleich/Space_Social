@@ -3,17 +3,14 @@
 
 {% block content %}
 <!-- Bootstrap Static Header -->
-<div style="background: url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/stsci-h-p2102a-m-2000x1198.png)" class="jumbotron bg-cover text-white">
-  <div class="container py-5 text-center">
-      <h1 class="display-4 font-weight-bold">Welcome to Space Social Network</h1>
-      <p class="font-italic mb-0"> See what Nasa is up too and check out some Nasa resources! Sign in and go to the groups page to network with other space enthusiasts!</p>
-      {% comment %} <p class="font-italic">Snippe by
-          <a href="https://bootstrapious.com" class="text-white">
-              <u>Bootstrapious</u>
-          </a>
-      </p> {% endcomment %}
+<div class= "pt-2 container  ">
+<div class="jumbotron text-center index-intro bg-cover text-white">
+  <div class="container intro-text text-center">
+      <h1 class="display-5 intro-script font-weight-bold">Welcome to Space Social Network</h1>
+      <p class="intro-script text-warning font-italic mb-6"> See what Nasa is up too and check out some Nasa resources! Sign in and go to the groups page to network with other space enthusiasts!</p>
       <a href="#" role="button" class="btn btn-primary px-5">See All Features</a>
   </div>
+</div>
 </div>
 
 {% comment %} <!-- For Demo Purpose -->
@@ -33,31 +30,31 @@
 <br> {% endcomment %}
 
 
-
- <div class="row pb-4">
-  <div class="col-md-6  tumbnail">
-    <div class="thumbnail ">
+ <div class="row pb-4 showme">
+  <div class="col-md-6 tumbnail">
+    <div class="thumbnail">
       <a href="https://mars.nasa.gov/msl/home/">
-        <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23378-16.jpg" alt="Nature" style="width:100%">
-        <p class="caption6 image-title p-2 pb-3 text-light">Space Tech</p>
+        <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/50108343176_ddfbc8d9db_o.jpg?itok=wjTrx0fx" alt="Nature" style="width:100%">
+        <p class="caption6 image-title p-2 pb-3 text-light">Space Telescope</p>
         <div class="caption pl-2 pr-2 pt-1">
-          <p>Mars Curisity Rover Latest!</p>
+          <p>View News With Nasa Space Telescope</p>
         </div>
       </a>
     </div>
   </div>
    
  
-<div class="col-md-6 panel  ">
-      <div class="thumbnail">
+<div class=" col-md-6  panel h-50 ">
+      <div class="thumbnail " >
         <a href="https://mars.nasa.gov/msl/home/">
-          <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23378-16.jpg" alt="Nature" style="width:100%">
-          <p class="caption6 image-title p-2 pb-3 text-light">Space Tech</p>
+          <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23378-16.jpg" alt="Mars Rover Should be here" style="width:100%; ">
+          <p class="caption6 image-title p-2 pb-3 text-light">Mars Rover</p>
           <div class="caption pl-2 pr-2  pt-1 ">
             <p>Mars Curisity Rover Latest!</p>
           </div>
         </a>
       </div>
+      
     </div>
    
   </div>
@@ -88,7 +85,7 @@
   </div>
    
   <div class="col-md-4 panel nasa-app">
-    <div class="thumbnail">
+    <div class="thumbnail ">
       <a href="https://mars.nasa.gov/msl/home/">
         <img src="https://lh3.googleusercontent.com/1JsiZgdGb2VAcYmVZO_5QN7_p-X01GIhFTcSk5LxNLmtrTI5ptR3jDKdetIqquj4jakYwRNCJRrE_SZGlAbDCiKTOUClrfw7q5lGxPYE6TNCWv6rxIReA1dzveyN2x1CUKYUTRKzeg=w2400" alt="Nature" style="width:100%">
         <p class="image-title p-2 pb-3 text-light">Downloads</p>
@@ -99,6 +96,8 @@
     </div>
 </div>
 </div>
+
+
 
 
 <hr>
@@ -119,10 +118,6 @@
       </div>
     </div>
   </div>
-
-
-
-
 
 
 {% endblock %}
