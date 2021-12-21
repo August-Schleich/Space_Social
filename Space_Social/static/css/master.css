@@ -1,6 +1,7 @@
+
 body {
     margin: auto;
-     
+     max-width:1500px;
     background-color: black;
     color:white;
   }
@@ -9,13 +10,14 @@ body {
 body {
   height: 100%;
   width: 100%;
-  
+  max-width:1500px;
   background: rgb(0, 0, 0);
   margin: auto;
 }
 
 #navbar{
-  background-image: url("https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_640.jpg")
+  background-image: url("https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_640.jpg");
+ 
 }
 .index-img{
   max-width: 100%;
@@ -104,7 +106,7 @@ color: black;
 .image-title{ 
   background-color:rgb(93, 127, 185,.650);
   position:absolute;
-  bottom:0%;
+  bottom:3%;
   
 }
 
@@ -112,13 +114,16 @@ color: black;
   position:relative;
 }
 .row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
+margin: auto;
+width:auto;
+height:auto;
+
 }
 
+
+.container {
+  position: relative;
+}
 
 .nasatext{
   font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -145,6 +150,8 @@ color: black;
 }
 .panel{
   height:auto;
+  position:relative;
+  
 }
 
 .index-page{
@@ -238,4 +245,21 @@ color: black;
     flex: 100%;
     max-width: 100%;
   }
+}
+
+.thumbnail{
+  position: relative;
+  height:100%;
+  
+}
+/* .little-thumbnail{
+  position: relative;
+  height:100%;
+  padding-left:10px;
+  padding-right:5px;
+} */
+
+
+.top-row{
+  display:flex;
 }
