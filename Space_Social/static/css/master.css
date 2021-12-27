@@ -222,17 +222,7 @@ margin:0;
 
 
 
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -243,7 +233,7 @@ margin:0;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -278,6 +268,8 @@ img {
   width: 100%;
   height: 100%; 
   object-fit: contain;
+  padding:0;
+  margin:0 auto;
 }
 
 .tele{
@@ -313,10 +305,32 @@ img {
   padding-left:5px;
   height:100%;
 }
+#spacetech{
+  padding-top:10px;
+  padding-right: 5px;
+  padding-bottom:25px;
+  
+}
+#hubble{
+  padding-top:10px;
+padding-left:5px;
+padding-right: 5px;
+height:100%;
+}
+#downloads{
+  padding-top:10px;
+height:100%;
+padding-left:5px;
 
+}
 
 @media screen and (max-width: 600px) {
-
+.img-layout .thumbnail{
+  margin-bottom: 15px;
+}
+.img-layout .panel{
+  margin-bottom: 15px;
+}
 .youtube{
   padding-top:0px;
 }
@@ -328,9 +342,7 @@ img {
   margin:10px;
   
   }
-.btm-images{
-  margin:15px;
-}
+
 img {
   width: auto; /* You can set the dimensions to whatever you want */
   height: 300px;
@@ -354,11 +366,55 @@ img {
 #blackholes{
   padding-top:0;
   padding-left:0;
+  padding-bottom: 0;
   height:100%;
+}
+
+#spacetech{
+  padding-left:0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  
+  height:100%;
+  margin:10px;
+
+
+}
+
+#hubble{
+height: 100%;
+margin: 5px;
+padding-left:0px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-top: 0px;
+
+
+}
+
+#downloads{
+  padding-left:0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  
+  height:100%;
+  margin:5px
 }
  
 }
 
+
+/* end media query */
+
 .yt-border{
+
   border: 1px solid white;
+}
+
+
+#image-area{
+  /* border: 5px solid red; */
+  margin:5px;
 }
