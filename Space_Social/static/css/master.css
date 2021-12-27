@@ -250,9 +250,11 @@ height:auto;
 .thumbnail{
   position: relative;
   height:100%;
-  
+  width:100%;
+  object-fit: cover;
   display:flex;
   margin: auto;
+ 
 }
 /* .little-thumbnail{
   position: relative;
@@ -271,3 +273,19 @@ img {
   height: 100%; 
   object-fit: contain;
 }
+
+.tele{
+  position: relative;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  display:flex;
+  margin: auto;
+ 
+}
+
+#social-content{
+  width: 100%;
+  height:auto;
+}
+
