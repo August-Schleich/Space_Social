@@ -105,8 +105,9 @@ color: black;
 }
 .image-title{ 
   background-color:rgb(93, 127, 185,.650);
+ 
   position:absolute;
-  bottom:3%;
+  bottom:13px;
   
 }
 
@@ -194,7 +195,9 @@ height:auto;
 .youtube{
  height:100%;
  width:100%;
- min-height:300px;
+min-height:275px;
+max-width:100%;
+margin:0;
 
 }
 
@@ -247,6 +250,9 @@ height:auto;
   }
 }
 
+
+
+
 .thumbnail{
   position: relative;
   height:100%;
@@ -287,5 +293,72 @@ img {
 #social-content{
   width: 100%;
   height:auto;
+  padding:0;
+  height: 100%; 
+  object-fit: contain;
 }
 
+#mars-rover{
+  padding-left: 10px;
+}
+
+#jupiter{
+  padding-top: 10px;
+  height: 100%;
+  padding-right: 5px;
+}
+
+#blackholes{
+  padding-top:10px;
+  padding-left:5px;
+  height:100%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+.youtube{
+  padding-top:0px;
+}
+  .img-layout{
+    margin: 5px;
+  
+  }
+  .img-layout .mainphoto{
+  margin:10px;
+  
+  }
+.btm-images{
+  margin:15px;
+}
+img {
+  width: auto; /* You can set the dimensions to whatever you want */
+  height: 300px;
+  object-fit: cover;
+}
+
+
+#mars-rover{
+  padding-left: 0;
+  margin:10px;
+ margin-bottom: 10px;
+}
+
+#jupiter{
+  padding-top: 0;
+  height: 100%;
+  padding-right: 0;
+ 
+}
+
+#blackholes{
+  padding-top:0;
+  padding-left:0;
+  height:100%;
+}
+ 
+}
+
+.yt-border{
+  border: 1px solid white;
+}
