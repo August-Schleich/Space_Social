@@ -12,7 +12,7 @@
 				</a>
 			{% endif %}
 			
-		<p class="media-heading nasatext">{{ post.message_html|safe }}</p>
+		<p class="media-heading nasatext">{{ post.message_html|safe|urlize }}</p>
 		
 			{% comment %} <time class="time"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at | timesince}} ago</a></time> {% endcomment %}
 			<time class="time text-primary">{{ post.created_at | timesince}} ago</time>
