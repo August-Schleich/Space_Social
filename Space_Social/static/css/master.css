@@ -197,7 +197,8 @@ height:auto;
  width:100%;
 min-height:275px;
 max-width:100%;
-margin:0;
+margin: 0;
+
 
 }
 
@@ -333,14 +334,20 @@ padding-left:5px;
 }
 .youtube{
   padding-top:0px;
+  margin-right:10px;
+  margin-left:5px;
+  margin-top:0px;
+  margin-bottom: 5px;
 }
   .img-layout{
     margin: 5px;
   
   }
   .img-layout .mainphoto{
-  margin:10px;
-  
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:10px;
+    margin-bottom: 5px;
   }
 
 img {
@@ -375,16 +382,18 @@ img {
   padding-right: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
-  
   height:100%;
-  margin:10px;
+  margin-right:2.5px;
+  margin-left:2.5px;
+  margin-top:0px;
+  margin-bottom: 0px;
 
 
 }
 
 #hubble{
 height: 100%;
-margin: 5px;
+margin: 2.5px;
 padding-left:0px;
 padding-right: 0px;
 padding-bottom: 0px;
@@ -398,9 +407,34 @@ padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
-  
   height:100%;
-  margin:5px
+  margin-right:2.5px;
+  margin-left:2.5px;
+  margin-top:2.5px;
+  margin-bottom: 0px;
+}
+
+.btm-section{
+  margin-right:10px;
+  margin-left:10px;
+  margin-top:0px;
+  margin-bottom: 0px;
+  padding-left:0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+
+}
+
+.big-mfer{
+  margin-right:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom: 0px;
+  padding-left:0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
  
 }
@@ -417,4 +451,21 @@ padding-top: 0px;
 #image-area{
   /* border: 5px solid red; */
   margin:5px;
+}
+
+.no-pad{
+  padding-left:0;
+  padding-right:0;
+  padding-bottom:0;
+  padding-top:0;
+}
+
+
+
+.big-mfer{
+  margin-right:5px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom: 0px;
+ 
 }
