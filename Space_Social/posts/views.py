@@ -62,7 +62,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     form_class= forms.PostForm
     select_related = ("user", "group")
     username = 'username'
-    success_url = reverse_lazy("posts:all" )
+    success_url = reverse_lazy("posts:all")
     
     #     kwargs = super().get_form_kwargs()
     #     kwargs.update({"user": self.request.user})
