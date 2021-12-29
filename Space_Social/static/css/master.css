@@ -195,7 +195,7 @@ height:auto;
 .youtube{
  height:100%;
  width:100%;
-min-height:275px;
+min-height:325px;
 max-width:100%;
 margin: 0;
 
@@ -242,7 +242,13 @@ margin: 0;
 }
 
 
+.dl-sub{
+  position: relative;
+  height:100%;
+  width:100%;
+  object-fit: cover;
 
+}
 
 .thumbnail{
   position: relative;
