@@ -58,7 +58,7 @@ class JoinGroup(LoginRequiredMixin, generic.RedirectView):
             messages.warning(self.request,("Warning, already a member of {}".format(group.name)))
 
         else:
-            messages.success(self.request,"You are now a member of the {} group.".format(group.name))
+            messages.success(self.request,"You are now a member of the {} group!".format(group.name))
 
         return super().get(request, *args, **kwargs)
   
