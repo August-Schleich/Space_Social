@@ -9,7 +9,13 @@
 	{% csrf_token %}
 	
 	{% bootstrap_form form  %}
-
+	{% if messages %}
+	{%for message in messages %}
+	<div class=" alert alert-danger" role="alert">
+		{{ message }}
+	</div>
+	{% endfor %}
+	{% endif %}
 	 <input type="submit" Value="POST" class="btn btn-primary btn-large" required=True>
 	
 </form>

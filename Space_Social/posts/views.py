@@ -80,7 +80,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
             self.object.save()
             return super().form_valid(form)
         else:
-            messages.warning(self.request, 'Not a member!')
+            messages.warning(self.request, 'Not a member of this group!')
         return self.form_invalid(form)
   
         

@@ -35,7 +35,13 @@
 
 {% block post_content %}
 <div class="col-md-6 ">
-	
+	{% if messages %}
+	{%for message in messages %}
+	<div class=" alert alert-danger" role="alert">
+		{{ message }}
+	</div>
+	{% endfor %}
+	{% endif %}
 	{% for post in post_list %}
 	
   {% include "posts/_post.html" %}
