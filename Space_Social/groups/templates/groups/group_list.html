@@ -4,7 +4,7 @@
 <div class ="col-md-4 p-5  rounded ">
     <div class ="content">
         {% if user.is_authenticated %}
-        <h2>Welcome
+        <h2>Hi
         <a href="{%url 'posts:for_user' username=user.username %}">
            @{{user.username}} 
         </a>

@@ -52,6 +52,9 @@ body {
 .nav-item hover{
     color: white;
 }
+.hamburger{
+  color: white;
+}
 
 #postForm{
     z-index: 1000;

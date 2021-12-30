@@ -9,6 +9,7 @@ from braces.views import SelectRelatedMixin
 from .forms import PostForm
 from . import forms
 from . import models
+
  
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -60,18 +61,11 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     model = models.Post
     form_class= forms.PostForm
     select_related = ("user", "group")
-    username = 'username'
-    success_url = reverse_lazy("posts:all")
-    
-    #     kwargs = super().get_form_kwargs()
-    #     kwargs.update({"user": self.request.user})
-    #     return kwargs
+    success_url = reverse_lazy("posts:for_user")
 
-    
-
-
-
-
+    def get_success_url(self):
+        return reverse_lazy('posts:for_user', args=[self.request.user.username])
+       
     def form_valid(self, form):
         
         self.object = form.save(commit=False)
@@ -83,7 +77,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
             messages.warning(self.request, 'Not a member of this group!')
         return self.form_invalid(form)
   
-        
+       
 
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
     model = models.Post
