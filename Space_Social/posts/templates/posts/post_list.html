@@ -2,6 +2,7 @@
 {% load humanize %}
 
 {% block pre_post_content %}
+
 <div class="col-md-4">
 	{% if request.user.is_authenticated %}
 	<div class="card card-with-shadow text-light bg-dark">
@@ -40,5 +41,8 @@
   {% include "posts/_post.html" %}
 	{% endfor %}
 
+	
+
 </div>
+
 {% endblock %}

@@ -1,18 +1,31 @@
 {% extends "posts/post_base.html" %}
 {% load humanize %}
 {% block pre_post_content %}
-<div class=" pt-5 col-md-4 ">
+<div class="userpage pt-5 col-md-4 ">
 	
 	<h2 class ="text-info">@{{ post_user.username }}</h2>
 	<p>Post History</p>
-	
+	<div class="">
+		{% if request.user.is_authenticated %}
+		<div class="card card-with-shadow text-light bg-dark">
+			<div class="content container ">
+				<h5 class="title p-1 ">Your Groups</h5>
+				<ul class="list-unstyled">
+					{% for member_group in user.user_groups.all %}
+					<li class="group li-with-bullet">
+						<a href="{% url 'groups:single' slug=member_group.group.slug %}">{{ member_group.group.name }}</a>
+					</li>
+					{% endfor %}
+					</ul>
+			</div>
+		</div>
+	{% endif %}
 </div>
-
 
 {% endblock %}
 
 {% block post_content %}
-<div class="col-md-6 pt-5 ">
+<div class="col-md-12 pt-5 ">
 	{% for post in post_list %}
 	<div class=" text-light " >
 		{% include "posts/_post.html" %}

@@ -36,10 +36,12 @@
                 <ul class = 'nav navbar-nav navbar-right collapse navbar-collapse ' >
                     <div class="navbar-nav ml-auto " >
                         {% if user.is_authenticated %}
+                          
                           <a class="nav-item nav-link" href="{% url 'posts:create' %}" class="btn btn-simple">Post</a>
                           <a class="nav-item nav-link" href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a>
                           <a class="nav-item nav-link" href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a>
                           <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a>
+                          <a class="nav-item nav-link text-info" href="{% url 'posts:all' %}" class="btn btn-simple">Logged in: {{user.username}}</a>
                         {% else %}
                           <a class="nav-item nav-link" href="{% url 'groups:all' %}"class="btn btn-simple">Groups</a>
                           <a class="nav-item nav-link" href="{% url 'accounts:login' %}" class="btn btn-simple">Log in</a>

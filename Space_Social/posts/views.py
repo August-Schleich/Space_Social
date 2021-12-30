@@ -18,8 +18,7 @@ class PostList(SelectRelatedMixin, generic.ListView):
     model = models.Post
     select_related = ("user", "group")
     ordering = ['-created_at']
-    
-    
+  
 
 
 class UserPosts(generic.ListView):
@@ -68,14 +67,21 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     #     kwargs.update({"user": self.request.user})
     #     return kwargs
 
+    
+
+
+
+
     def form_valid(self, form):
         
         self.object = form.save(commit=False)
         self.object.user = self.request.user
-        self.object.save()
-        return super().form_valid(form)
-    
-  
+        if self.object.user in self.object.group.members.iterator():
+            self.object.save()
+            return super().form_valid(form)
+        else:
+            messages.warning(self.request, 'Not a member!')
+        return self.form_invalid(form)
   
         
 
