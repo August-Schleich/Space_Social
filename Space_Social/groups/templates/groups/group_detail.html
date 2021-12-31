@@ -20,7 +20,14 @@
 	  
   </div>
   <br>
+  <p class ="text-primary">Group Users</p>
+  {% for user in group.members.all %}
+ 
+<li class =" list-inline ">@{{user.username}}</li>
+ 
+{% endfor %}
 </div>
+
 
 {% endblock %}
 

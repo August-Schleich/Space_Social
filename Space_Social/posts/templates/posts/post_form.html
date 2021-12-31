@@ -16,6 +16,20 @@
 	</div>
 	{% endfor %}
 	{% endif %}
+	<div class="col-md-4">
+		{% if request.user.is_authenticated %}
+			<div class="content container ">
+				<h5 class="title p-1 ">Your Groups</h5>
+				<ul class=" list-inline">
+					{% for member_group in user.user_groups.all %}
+					<li class="group list-inline-item">
+						<a href="{% url 'groups:single' slug=member_group.group.slug %}">{{ member_group.group.name }}</a>
+					</li>
+					{% endfor %}
+					</ul>
+			</div>
+		</div>
+		{% endif %}
 	 <input type="submit" Value="POST" class="btn btn-primary btn-large" required=True>
 	
 </form>
