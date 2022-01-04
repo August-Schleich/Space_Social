@@ -83,7 +83,7 @@
  
 
  <section class="btm-section">
-  <div class="row no-gutters">
+  <div class="row no-gutters ">
   <div id= "spacetech" class="col-md-4 panel ">
     <div class="thumbnail">
       <a  href="https://www.nasa.gov/topics/technology/index.html">
@@ -122,17 +122,28 @@
 </section>
 </div>
 <section class="" id="social-content">
-<div class="row rounded">
-  <div class="col-md-6 panel  youtube tumbnail">
-  <iframe class ="  youtube yt-border"width="auto" height="auto" src="https://www.youtube.com/embed/21X5lGlDOfg" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-     allowfullscreen></iframe>
-    <iframe class="youtube yt-border " width="560" height="315" src="https://www.youtube.com/embed/l3QQQu7QLoM" title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="row"> 
+  <div class="col-md-6 youtube  panel">
+  
+     <div class = "yt-wrapper  ">
+      <div class="iframe-container">
+        <iframe class =" yt-border"width="auto" height="auto" src="https://www.youtube.com/embed/21X5lGlDOfg" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+      </div>
+      </div>
+<br>
+      <div class = "yt-wrapper  ">
+        <div class="iframe-container ">
+          <iframe class="yt-border " width="560" height="315" src="https://www.youtube.com/embed/l3QQQu7QLoM" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+        </div>
+        </div>
   </div>
 
-<div class="col-md-6 panel  ">
-      <div class="thumbnail">
+<div class="col-md-6 panel twitter">
+      <div class="thumbnail">  
         <a class="twitter-timeline" height="660px"href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
         </a>
@@ -140,7 +151,6 @@
     </div>
   </div>
 </section>
-
 
 
 {% endblock %}
