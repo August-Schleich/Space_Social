@@ -1,7 +1,7 @@
 
 body {
     margin: auto;
-     max-width:1500px;
+    max-width: 1366px;
     background-color: black;
     color:white;
   }
@@ -10,7 +10,7 @@ body {
 body {
   height: 100%;
   width: 100%;
-  max-width:1500px;
+  max-width: 1366px;;
   background: rgb(0, 0, 0);
   margin: auto;
 }
@@ -203,15 +203,20 @@ height:auto;
   height:90%;
 }
 .youtube{
+  position: relative;
  height:100%;
  width:100%;
 min-height:325px;
+
 max-width:100%;
 margin: 0;
 
 
 }
-
+.yt-border{
+  position: relative;
+  border: 2px solid rgb(143, 143, 143);
+}
 
 .iframe-container{
   position:relative;
@@ -258,7 +263,7 @@ margin: 0;
 
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .column {
     flex: 50%;
     max-width: 50%;
@@ -266,7 +271,7 @@ margin: 0;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -323,10 +328,10 @@ img {
 
 #social-content{
   width: 100%;
-  height:auto;
-  padding:0;
+  max-height:660px;
   height: 100%; 
   object-fit: contain;
+ position: relative;
 }
 
 #mars-rover{
@@ -490,10 +495,7 @@ padding-top: 0px;
 
 /* end media query */
 
-.yt-border{
 
-  border: 1px solid white;
-}
 
 
 #image-area{
